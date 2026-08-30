@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between bg-white">
+    <nav className="flex justify-between bg-white p-5">
       <ul className="flex gap-3">
         <li>
           <Link href={"/"}>Home</Link>
