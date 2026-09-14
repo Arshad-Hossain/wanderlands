@@ -14,12 +14,36 @@ import {
 } from "@heroui/react";
 
 const AddDestinationPage = () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const formData = new FormData(e.currentTarget);
+    const destination = Object.fromEntries(formData.entries());
+
+    console.log(destination);
+
+    const res = await fetch("http://localhost:5000/destination", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(destination),
+    });
+    const data = await res.json();
+    console.log(data);
+
+    if (res.ok) {
+      form.reset();
+    }
+  };
   return (
     <div className="p-5 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold">Add Destination</h1>
 
       <Card>
-        <form className="p-5 space-y-8 w-3xl">
+        <form onSubmit={onSubmit} className="p-5 space-y-8 w-3xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Destination Name */}
             <div className="md:col-span-2">
