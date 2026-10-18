@@ -21,7 +21,7 @@ function Navbar() {
       </ul>
       <div>
         <Image
-          src={"/assets/Wanderlast.png"}
+          src={"/assets/wanderlands.png"}
           height={150}
           width={150}
           alt="logo"
