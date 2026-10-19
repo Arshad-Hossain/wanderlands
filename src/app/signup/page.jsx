@@ -111,9 +111,9 @@ const SignUpPage = () => {
           </div>
         </Form>
         <div className="flex justify-center items-center gap-3">
-          <Separator />
+          {/* <Separator /> */}
           <div className="whitespace-nowrap"> Or sign up with </div>
-          <Separator />
+          {/* <Separator /> */}
         </div>
         <div>
           <Button
