@@ -1,3 +1,4 @@
+import BookingCard from "@/components/BookingCard";
 import { DeleteAlert } from "@/components/DeleteAlert";
 import { EditModal } from "@/components/EditModal";
 import { Button } from "@heroui/react";
@@ -26,45 +27,49 @@ const DestinationDetailsPage = async ({ params }) => {
   // console.log(destination);
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center gap-3 justify-end mt-5 mb-3">
         <EditModal destination={destination}></EditModal>
         <DeleteAlert destination={destination}></DeleteAlert>
       </div>
 
       <Image
-        className="w-full"
+        className="w-full h-100 object-cover"
         alt={destinationName}
         src={imageUrl}
         height={500}
         width={800}
       ></Image>
 
-      <div className="p-4 flex flex-col flex-1">
-        {/* Country */}
-        <div className="flex items-center gap-1 text-gray-500 text-sm">
-          <LuMapPin />
-          <span>{country}</span>
-        </div>
+      <div className="flex justify-between">
+        <div className="p-4 flex flex-col flex-1">
+          {/* Country */}
+          <div className="flex items-center gap-1 text-gray-500 text-sm">
+            <LuMapPin />
+            <span>{country}</span>
+          </div>
 
-        {/* Destination & Price */}
-        <div className="flex justify-between items-start mt-2 gap-3">
-          <div>
-            <h2 className="text-xl font-bold">{destinationName}</h2>
+          {/* Destination & Price */}
+          <div className="flex justify-between items-start mt-2 gap-3">
+            <div>
+              <h2 className="text-xl font-bold">{destinationName}</h2>
 
-            {/* Duration */}
-            <div className="flex gap-1 items-center text-gray-600 text-sm mt-1">
-              <FaRegCalendar />
-              <span>{duration}</span>
+              {/* Duration */}
+              <div className="flex gap-1 items-center text-gray-600 text-sm mt-1">
+                <FaRegCalendar />
+                <span>{duration}</span>
+              </div>
             </div>
-          </div>
 
-          {/* Price */}
-          <div className="shrink-0">
+            {/* Price */}
+            {/* <div className="shrink-0">
             <h3 className="text-2xl font-bold text-cyan-600">${price}</h3>
+          </div> */}
           </div>
+          <h1 className="mt-10 text-2xl font-bold">Overview</h1>
+          <p>{description}</p>
         </div>
-        <h1 className="mt-10 text-2xl font-bold">Overview</h1>
-        <p>{description}</p>
+
+        <BookingCard destination={destination}></BookingCard>
       </div>
     </div>
   );

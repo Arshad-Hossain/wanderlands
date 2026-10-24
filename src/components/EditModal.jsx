@@ -52,7 +52,7 @@ export function EditModal({ destination }) {
       </Button> */}
 
       <div className="flex justify-end">
-        <Button variant="outline" className={`rounded-none mt-5 mb-3`}>
+        <Button variant="outline" className={`rounded-none `}>
           <BiEdit></BiEdit>Edit
         </Button>
       </div>
