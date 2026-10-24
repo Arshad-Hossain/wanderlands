@@ -99,11 +99,11 @@ const LoginPage = () => {
           </div>
         </Form>
 
-        {/* <div className="flex justify-center items-center gap-3">
-          <Separator /> 
-          <div className="whitespace-nowrap"> Or sign up with </div>
-           <Separator />
-        </div> */}
+        <div className="flex justify-center items-center gap-3">
+          {/* <Separator /> */}
+          <div className="whitespace-nowrap"> Or </div>
+          {/* <Separator /> */}
+        </div>
         <div>
           <Button
             onClick={handleGoogleSignin}
