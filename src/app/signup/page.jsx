@@ -110,11 +110,11 @@ const SignUpPage = () => {
             </Button>
           </div>
         </Form>
-        <div className="flex justify-center items-center gap-3">
-          {/* <Separator /> */}
+        {/* <div className="flex justify-center items-center gap-3">
+          <Separator /> 
           <div className="whitespace-nowrap"> Or sign up with </div>
-          {/* <Separator /> */}
-        </div>
+          <Separator />
+        </div>  */}
         <div>
           <Button
             onClick={handleGoogleSignin}
