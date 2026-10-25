@@ -22,36 +22,52 @@ const MyBookingPage = async () => {
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-3xl font-bold mb-5">My Bookings</h1>
-      <div className="space-y-5">
-        {bookings.map((booking) => (
-          <div key={booking._id} className="flex gap-5 border p-5 min-w-3xl">
-            <Image
-              src={booking.imageUrl}
-              alt={booking.destinationName}
-              height={200}
-              width={200}
-            />
-            <div>
-              <h1 className="font-bold text-2xl">{booking.destinationName}</h1>
-              <p>
-                {new Date(booking.departureDate).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
 
-              <p>Booking Id: {booking._id}</p>
+      {bookings.length === 0 ? (
+        <div className="text-center py-16 border rounded-lg p-5">
+          <h2 className="text-2xl font-semibold mb-2">
+            You haven't booked anything yet.
+          </h2>
+          <p className="text-gray-500">
+            Your bookings will appear here once you book a trip.
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-5">
+          {bookings.map((booking) => (
+            <div key={booking._id} className="flex gap-5 border p-5 min-w-3xl">
+              <Image
+                src={booking.imageUrl}
+                alt={booking.destinationName}
+                height={200}
+                width={200}
+              />
 
-              <p className="text-3xl font-bold text-cyan-500">
-                ${booking.price}
-              </p>
+              <div>
+                <h2 className="font-bold text-2xl">
+                  {booking.destinationName}
+                </h2>
 
-              <BookingCancelAlert bookingId={booking._id} />
+                <p>
+                  {new Date(booking.departureDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
+
+                <p>Booking Id: {booking._id}</p>
+
+                <p className="text-3xl font-bold text-cyan-500">
+                  ${booking.price}
+                </p>
+
+                <BookingCancelAlert bookingId={booking._id} />
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
