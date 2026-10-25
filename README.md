@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌍 Wanderlands — Discover Your Next Adventure
 
-## Getting Started
+Wanderlands is a modern travel exploration web application designed to help travelers discover destinations and plan memorable adventures. Built with Next.js, React, and Tailwind CSS, it provides a clean and engaging interface for exploring travel possibilities.
 
-First, run the development server:
+## ✨ Features
+
+- 🧭 **Modern Landing Page** — A visually appealing interface for travel enthusiasts.
+- 📍 **Destination Search UI** — Search criteria for location, city, or ZIP code.
+- 📅 **Travel Planning Interface** — Options for trip duration and travel dates.
+- 💰 **Budget Selection** — Choose a budget range for travel planning.
+- 👥 **Group Travel** — Specify the number of travelers.
+- 🎨 **Responsive Design** — Styled with Tailwind CSS.
+- 🧩 **Reusable Components** — Built with React and HeroUI.
+
+> Note: Features such as destination recommendations, booking, and advanced search depend on their implementation in the application.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js
+- **Frontend:** React
+- **Styling:** Tailwind CSS
+- **UI Components:** HeroUI
+- **Database:** MongoDB integration dependency
+- **Authentication:** Better Auth integration dependency
+- **Icons:** React Icons
+- **Code Quality:** ESLint
+
+## 🚀 Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Arshad-Hossain/wanderlands.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd wanderlands
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure environment variables
+
+If required by your application, create a `.env.local` file in the project root and configure the necessary environment variables for your database and authentication setup.
+
+```env
+# Add your required environment variables here
+```
+
+Do not commit secret keys, passwords, or database credentials.
+
+### 5. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📜 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description                           |
+| --------------- | ------------------------------------- |
+| `npm run dev`   | Starts the development server         |
+| `npm run build` | Builds the application for production |
+| `npm run start` | Starts the production server          |
+| `npm run lint`  | Checks the code using ESLint          |
 
-## Learn More
+## 📂 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+wanderlands/
+├── public/
+├── src/
+│   ├── app/
+│   └── components/
+├── package.json
+├── package-lock.json
+├── next.config.mjs
+├── eslint.config.mjs
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `public/` — Static assets and images.
+- `src/app/` — Application pages, layouts, and routes.
+- `src/components/` — Reusable UI components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗺️ Future Improvements
 
-## Deploy on Vercel
+- Destination recommendations
+- Advanced search and filtering
+- User authentication
+- Saved destinations and personalized trips
+- Travel itinerary management
+- Booking integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+These are potential enhancements and may not yet be implemented.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repository.
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Commit your changes:
+
+   ```bash
+   git commit -m "Add your feature"
+   ```
+
+4. Push your branch:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+5. Open a pull request.
+
+## 👨‍💻 Author
+
+**Arshad Hossain**
+
+- GitHub: [@Arshad-Hossain](https://github.com/Arshad-Hossain)
+- Repository: [Wanderlands](https://github.com/Arshad-Hossain/wanderlands)
+
+## 📄 License
+
+No license has been specified yet. Add a `LICENSE` file if you intend to distribute this project under an open-source license.
+
+---
+
+<p align="center">
+  Made with ❤️ using Next.js and React
+  <br />
+  <strong>Wanderlands — Your next adventure starts here.</strong>
+</p>
